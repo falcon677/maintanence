@@ -1,8 +1,4 @@
-#!/bin/env expect
-
 spawn su - openstackrd
-expect "Password:*"
-send ""
-expect ""
+expect "密码" 
+send "[密码]\r"
 interact
-exit
