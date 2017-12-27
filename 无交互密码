@@ -1,0 +1,4 @@
+spawn su - openstackrd
+expect "密码" 
+send "[密码]\r"
+interact
