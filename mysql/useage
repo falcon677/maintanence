@@ -1,0 +1,10 @@
+from mysql_client import db_client
+
+db_client = db_client()
+# 查询数据库，返回一个dict 类型
+sql = "select * from xxx where id='%s';" % uuid
+res = db_client.execute_query(db_client.source_conf, sql)
+
+# 把 dict 插入目标数据库，的指定表中
+db_client.exec_insert_dict(db_client.destination_conf, '表名', res)
+
